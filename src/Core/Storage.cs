@@ -286,8 +286,11 @@ namespace Napominalka.Core
         public bool MinimizeToTray = true;
         public string Hotkey = "Control+Alt+N";
         public bool TopMostAlerts = true;
-        public bool CheckUpdates = false;
-        public string UpdateUrl = "";
+        public bool CheckUpdates = true;
+        // Открытый список выпусков. Читается без токена и без пароля, поэтому
+        // в программе нечего красть. Адрес можно поменять в настройках.
+        public const string UpdateUrlDefault = "https://api.github.com/repos/romeo198533/Napominalka/releases/latest";
+        public string UpdateUrl = UpdateUrlDefault;
         public string DefaultMelody = "по умолчанию.wav";
         public int SignalRepeats = 3;
         public string SpeechMode = "NVDA";      // NVDA | Системный | Не озвучивать
